@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white font-sans font-normal;
+  }
+
+  main,
+  .header-wrapper {
+    @apply mx-auto max-w-[1200px];
+  }
+}
+
+@layer utilities {
+  .home-search::-ms-clear {
+    @apply hidden h-0 w-0;
+  }
+  .home-search::-ms-reveal {
+    @apply hidden h-0 w-0;
+  }
+
+  .home-search::-webkit-search-decoration,
+  .home-search::-webkit-search-cancel-button,
+  .home-search::-webkit-search-results-button,
+  .home-search::-webkit-search-results-decoration {
+    @apply hidden;
+  }
+
+  .link {
+    @apply text-blue-800 hover:underline;
+  }
+}
